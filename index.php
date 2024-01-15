@@ -15,25 +15,65 @@ require __DIR__ . "/data.php";
 
 </head>
 
-<body>
+<body class="bg-success p-2 bg-opacity-25">
 
-    <div class="container">
-        <h3 class="text-center">Produtti per canni</h3>
-        <div class="card" style="width: 18rem;">
-        <?php foreach ($productsForDogs as $product) : ?>
-            <img src="<?= $product->imgUrl ?>" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title"> <?= $product->name ?></h5>
-                <p class="card-text"> <?= $product->price ?></p>
-                <p class="card-text"> <?= $product->description ?></p>
-                <p class="card-text"> <?= $product->description ?></p>
-                <p><?=$product->category->name?></p>
-                <a href="#" class="btn btn-primary">Compra</a>
-            </div>
+    <section class="container ">
+        <!-- Prodotti canne-->
+        <h3 class="text-center">PRODOTTI PER CANNI</h3>
+        <div class="row flex-nowrap justify-content-center">
+            <?php foreach ($productsForDogs as $product): ?>
+                <div class="col-3 m-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?= $product->imgUrl ?>" class="card-img-top p-3 w-80" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?= $product->name ?>
+                            </h5>
+                            <p class="card-text">
+                                <?= $product->price ?>
+                            </p>
+                            <p class="card-text">
+                                <?= $product->description ?>
+                            </p>
+                            <p>
+                                <?= $product->category->name ?>
+                            </p>
+                            <a href="#" class="btn btn-primary">Compra</a>
+                        </div>
+                    </div>
+                </div>
             <?php endforeach; ?>
         </div>
 
-    </div>
+         <!-- Prodotti gatti-->
+         <h3 class="text-center">PRODOTTI PER GATTI</h3>
+        <div class="row flex-nowrap justify-content-center">
+            <?php foreach ($productsForCats as $product): ?>
+                <div class="col-3 m-2">
+                    <div class="card" style="width: 18rem;">
+                        <img src="<?= $product->imgUrl ?>" class="card-img-top p-3 w-80" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?= $product->name ?>
+                            </h5>
+                            <p class="card-text">
+                                <?= $product->price ?>
+                            </p>
+                            <p class="card-text">
+                                <?= $product->description ?>
+                            </p>
+                            <p>
+                                <?= $product->category->name ?>
+                            </p>
+                            <a href="#" class="btn btn-primary">Compra</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+
 
 </body>
 
