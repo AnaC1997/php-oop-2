@@ -23,7 +23,7 @@ require __DIR__ . "/data.php";
         <div class="row flex-nowrap justify-content-center">
             <?php foreach ($productsForDogs as $product): ?>
                 <div class="col-3 m-2">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="min-width: 18rem;">
                         <img src="<?= $product->imgUrl ?>" class="card-img-top p-3 w-80" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">
@@ -50,7 +50,7 @@ require __DIR__ . "/data.php";
         <div class="row flex-nowrap justify-content-center">
             <?php foreach ($productsForCats as $product): ?>
                 <div class="col-3 m-2">
-                    <div class="card" style="width: 18rem;">
+                    <div class="card" style="min-width: 18rem;">
                         <img src="<?= $product->imgUrl ?>" class="card-img-top p-3 w-80" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">

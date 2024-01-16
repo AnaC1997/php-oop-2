@@ -3,7 +3,8 @@
  require_once __DIR__ . "/Category.php";
 //Variabili d'istanza Prodotto
 class Product
-{
+{   
+  
     public $name;
     public $price;
     public $description;
@@ -13,7 +14,8 @@ class Product
     //Costruttore
 
     public function __construct($name, $price, $description, $imgUrl, Category $category)
-    {
+    {    
+    
         $this->name = $name;
         $this->price = $price;
         $this->description = $description;
@@ -43,7 +45,7 @@ class Product
     {
         return $this->category;
     }
-
+   
 
 
 
