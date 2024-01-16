@@ -35,8 +35,28 @@ require __DIR__ . "/data.php";
                             <p class="card-text">
                                 <?= $product->description ?>
                             </p>
+                            <!--Caratteristiche proddotto-->
+                            <h6>Caratteristiche: </h6>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <?php
+                                    if ($product instanceof Giocho) {
+                                        echo "Colore: " . $product->colore . "<br>";
+                                        echo "Size: " . $product->size . "<br>";
+                                        echo "Peso: " . $product->peso . "<br>";
+                                    }else if($product instanceof Cibo){
+                                        echo "Grami: " . $product->grami . "<br>";
+                                        echo "Gusto: " . $product->gusto . "<br>";
+                                    } else if($product instanceof Accesorio){
+                                    echo "Meteriale: " . $product->meteriale . "<br>";
+                                    echo "Colore: " . $product->colore . "<br>";
+                                }
+                                    ?>
+                                </li>
+                            </ul>
                             <p class="text-success">
-                            <?= get_class($product) ?>/<?= $product->category->name?>
+                                <?= get_class($product) ?>/
+                                <?= $product->category->name ?>
                             </p>
                             <a href="#" class="btn btn-primary">Compra</a>
                         </div>
@@ -62,8 +82,28 @@ require __DIR__ . "/data.php";
                             <p class="card-text">
                                 <?= $product->description ?>
                             </p>
+                             <!--Caratteristiche proddotto-->
+                             <h6>Caratteristiche: </h6>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <?php
+                                    if ($product instanceof Giocho) {
+                                        echo "Colore: " . $product->colore . "<br>";
+                                        echo "Size: " . $product->size . "<br>";
+                                        echo "Peso: " . $product->peso . "<br>";
+                                    }else if($product instanceof Cibo){
+                                        echo "Grami: " . $product->grami . "<br>";
+                                        echo "Gusto: " . $product->gusto . "<br>";
+                                    } else if($product instanceof Accesorio){
+                                    echo "Meteriale: " . $product->meteriale . "<br>";
+                                    echo "Colore: " . $product->colore . "<br>";
+                                }
+                                    ?>
+                                </li>
+                            </ul>
                             <p class="text-success">
-                            <?= get_class($product) ?>/<?= $product->category->name?>
+                                <?= get_class($product) ?>/
+                                <?= $product->category->name ?>
                             </p>
                             <a href="#" class="btn btn-primary">Compra</a>
                         </div>

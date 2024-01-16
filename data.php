@@ -17,14 +17,20 @@ $productsForDogs = [
         19.99."€",
         "Ciotola in acciaio inossidabile resistente per cani di tutte le taglie.",
         "https://www.galleranistore.it/media/catalog/product/cache/1/image/600x/040ec09b1e35df139433887a97daa66f/c/i/ciotola_blu.jpg",
-        $catgDogs
+        $catgDogs,
+        "Plastica",
+        "Rosso"
+
     ),
     new Giocho (
         "Giocattolo a Masticare",
         20.99."€",
         "Giocattolo resistente per cani con effetto massaggiante sulle gengive.",
         "https://cdn.manomano.com/images/images_products/30876563/P/109980211_1.jpg",
-        $catgDogs
+        $catgDogs,
+        "Blue",
+        "5cm",
+        "100k"
     ),
 
     new Accesorio (
@@ -32,7 +38,9 @@ $productsForDogs = [
         40.99."€",
         "Cuscino ortopedico per cani anziani o con problemi articolari.",
         "https://cdn.manomano.com/images/images_products/21959017/P/87220618_1.jpg",
-        $catgDogs
+        $catgDogs,
+        "Lino",
+        "Grigio"
     ),
 
     new Cibo (
@@ -40,7 +48,10 @@ $productsForDogs = [
         50.99."€",
         "Snack per cani che promuovono la salute dentale.",
         "https://croci.net/wp-content/uploads/2023/01/Snack_cane_Dental_Defence_Veg_Arachidi.jpg",
-        $catgDogs
+        $catgDogs,
+        "100",
+        "Pollo",
+
     ),
 
 
@@ -53,7 +64,10 @@ $productsForCats = [
       24.99."€",
       "Giostra interattiva con palle luminose per intrattenere il tuo gatto.",
       "https://cdn.manomano.com/images/images_products/30876563/P/96815654_1.jpg",
-      $catgCats 
+      $catgCats ,
+      "Multicolore",
+      "5cm",
+      "100k",
     ),
 
     new Accesorio (
@@ -61,7 +75,9 @@ $productsForCats = [
       15.79 ."€",
       "Lettiera per gatti con formula antibatterica per una pulizia duratura.",
       "https://www.picclickimg.com/j4oAAOSwDkJfRhlk/Kitty-Friend-precedentemente-Sanicat-lettiera-antibatterica-per-gatti.webp",
-      $catgCats 
+      $catgCats,
+      "Lino",
+      "Grigio"
     ),
 
     new Accesorio (
@@ -69,7 +85,9 @@ $productsForCats = [
       49.99."€",
       "Alimentatore automatico programmabile per gatti.",
       "https://ae01.alicdn.com/kf/S50d7a17301fc4b928a8a7da54241885dL.jpg_640x640Q90.jpg_.webp",
-      $catgCats 
+      $catgCats,
+      "Aluminio",
+      "Grigio"
     ),
 
     new Giocho (
@@ -77,7 +95,10 @@ $productsForCats = [
       7.99."€",
       "Giocattolo per gatti con piume per stimolare l'istinto di caccia.",
       "https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/c4c65a6de13d7efad693914a9660fa3e.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
-      $catgCats 
+      $catgCats, 
+      "Viola",
+      "5cm",
+      "100k",
       )
   ];
   
