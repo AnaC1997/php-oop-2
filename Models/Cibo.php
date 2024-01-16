@@ -2,9 +2,9 @@
 
 require_once __DIR__ . "/Product.php";
 
-class cibo extends Product
+class Cibo extends Product
 {
-    public $name;
-
-
+    public $nameCibo;
+   
 }
+

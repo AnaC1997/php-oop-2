@@ -29,14 +29,14 @@ require __DIR__ . "/data.php";
                             <h5 class="card-title">
                                 <?= $product->name ?>
                             </h5>
-                            <p class="card-text">
+                            <p class="card-text text-danger">
                                 <?= $product->price ?>
                             </p>
                             <p class="card-text">
                                 <?= $product->description ?>
                             </p>
-                            <p>
-                                <?= $product->category->name ?>
+                            <p class="text-success">
+                            <?= get_class($product) ?>/<?= $product->category->name?>
                             </p>
                             <a href="#" class="btn btn-primary">Compra</a>
                         </div>
@@ -45,8 +45,8 @@ require __DIR__ . "/data.php";
             <?php endforeach; ?>
         </div>
 
-         <!-- Prodotti gatti-->
-         <h3 class="text-center">PRODOTTI PER GATTI</h3>
+        <!-- Prodotti gatti-->
+        <h3 class="text-center">PRODOTTI PER GATTI</h3>
         <div class="row flex-nowrap justify-content-center">
             <?php foreach ($productsForCats as $product): ?>
                 <div class="col-3 m-2">
@@ -56,14 +56,14 @@ require __DIR__ . "/data.php";
                             <h5 class="card-title">
                                 <?= $product->name ?>
                             </h5>
-                            <p class="card-text">
+                            <p class="card-text text-danger">
                                 <?= $product->price ?>
                             </p>
                             <p class="card-text">
                                 <?= $product->description ?>
                             </p>
-                            <p>
-                                <?= $product->category->name ?>
+                            <p class="text-success">
+                            <?= get_class($product) ?>/<?= $product->category->name?>
                             </p>
                             <a href="#" class="btn btn-primary">Compra</a>
                         </div>
