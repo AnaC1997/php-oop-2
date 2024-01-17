@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . "/Product.php";
+require_once __DIR__ ."/Cliente.php";
 
 class Giocho extends Product
 {
@@ -8,9 +9,9 @@ class Giocho extends Product
     public $size;
     public $peso;
 
-    public function __construct($name, $price, $description, $imgUrl, Category $category, $colore, $size, $peso) 
+    public function __construct($name, $price, $description, $imgUrl, Category $category, $registrato, $colore, $size, $peso) 
     {
-        parent::__construct($name, $price, $description, $imgUrl, $category);
+        parent::__construct($name, $price, $description, $imgUrl, $category,$registrato);
         $this->colore = $colore;
         $this->size = $size;
         $this->peso = $peso;

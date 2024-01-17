@@ -11,13 +11,15 @@ class Product
     public $description;
     public $imgUrl;
 
+    public $category;
+
     use Cliente;
 
     
 
     //Costruttore
 
-    public function __construct($name, $price, $description, $imgUrl, Category $category, Cliente $registrato)
+    public function __construct($name, $price, $description, $imgUrl, Category $category, bool $registrato)
     {    
     
         $this->name = $name;
@@ -25,7 +27,7 @@ class Product
         $this->description = $description;
         $this->imgUrl = $imgUrl;
         $this ->category = $category;
-        $this ->cliente = $registrato;
+        $this ->registrato = $registrato;
      
         
 
@@ -50,13 +52,16 @@ class Product
     public function getPrice()
     {
 
-        $prezzoScontato = $this->price;
+       $prezzoScontato = $this->price ;
 
         if($this->registrato){
-            $prezzoScontato = $prezzoScontato - ($prezzoScontato * 0.20);
+            echo "-20% di sconto ". number_format($prezzoScontato = $prezzoScontato - ($prezzoScontato * 0.20),2);
 
+        } else{
+            echo "Prezzo pieno: ";
+            return $prezzoScontato;
         }
-        return $prezzoScontato;
+        
     }
     public function setPrice($price)
     { 
@@ -83,6 +88,10 @@ class Product
     { 
          $this->imgUrl = $nuovaImgUrl;
     }
+
+
+
+
 
 
 

@@ -1,7 +1,7 @@
 <?php
 trait Cliente
 {
-    public $registrato = false; 
+    public $registrato; 
    
     public function getRegistro()
     {

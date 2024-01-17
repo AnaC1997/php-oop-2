@@ -29,9 +29,7 @@ require __DIR__ . "/data.php";
                             <h5 class="card-title">
                                 <?= $product->name ?>
                             </h5>
-                            <p class="card-text text-danger">
-                                <?= $product->price ?>
-                            </p>
+                          <p class="card-text text-danger"><?php echo $product->getPrice() ."€"; ?> </p>
                             <p class="card-text">
                                 <?= $product->description ?>
                             </p>
@@ -44,13 +42,13 @@ require __DIR__ . "/data.php";
                                         echo "Colore: " . $product->colore . "<br>";
                                         echo "Size: " . $product->size . "<br>";
                                         echo "Peso: " . $product->peso . "<br>";
-                                    }else if($product instanceof Cibo){
+                                    } else if ($product instanceof Cibo) {
                                         echo "Grami: " . $product->grami . "<br>";
                                         echo "Gusto: " . $product->gusto . "<br>";
-                                    } else if($product instanceof Accesorio){
-                                    echo "Meteriale: " . $product->meteriale . "<br>";
-                                    echo "Colore: " . $product->colore . "<br>";
-                                }
+                                    } else if ($product instanceof Accesorio) {
+                                        echo "Meteriale: " . $product->meteriale . "<br>";
+                                        echo "Colore: " . $product->colore . "<br>";
+                                    }
                                     ?>
                                 </li>
                             </ul>
@@ -76,14 +74,12 @@ require __DIR__ . "/data.php";
                             <h5 class="card-title">
                                 <?= $product->name ?>
                             </h5>
-                            <p class="card-text text-danger">
-                                <?= $product->price ?>
-                            </p>
+                            <p class="card-text text-danger"><?php echo $product->getPrice() ."€"; ?> </p>
                             <p class="card-text">
                                 <?= $product->description ?>
                             </p>
-                             <!--Caratteristiche proddotto-->
-                             <h6>Caratteristiche: </h6>
+                            <!--Caratteristiche proddotto-->
+                            <h6>Caratteristiche: </h6>
                             <ul class="list-group">
                                 <li class="list-group-item">
                                     <?php
@@ -91,13 +87,13 @@ require __DIR__ . "/data.php";
                                         echo "Colore: " . $product->colore . "<br>";
                                         echo "Size: " . $product->size . "<br>";
                                         echo "Peso: " . $product->peso . "<br>";
-                                    }else if($product instanceof Cibo){
+                                    } else if ($product instanceof Cibo) {
                                         echo "Grami: " . $product->grami . "<br>";
                                         echo "Gusto: " . $product->gusto . "<br>";
-                                    } else if($product instanceof Accesorio){
-                                    echo "Meteriale: " . $product->meteriale . "<br>";
-                                    echo "Colore: " . $product->colore . "<br>";
-                                }
+                                    } else if ($product instanceof Accesorio) {
+                                        echo "Meteriale: " . $product->meteriale . "<br>";
+                                        echo "Colore: " . $product->colore . "<br>";
+                                    }
                                     ?>
                                 </li>
                             </ul>
@@ -106,7 +102,7 @@ require __DIR__ . "/data.php";
                                 <?= $product->category->name ?>
                             </p>
                             <p>
-                            <a href="#" class="btn btn-primary">Compra</a>
+                                <a href="#" class="btn btn-primary">Compra</a>
                         </div>
                     </div>
                 </div>
