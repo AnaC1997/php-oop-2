@@ -1,20 +1,23 @@
 <?php
 
  require_once __DIR__ . "/Category.php";
- require_once __DIR__ ."/Category.php";
+ require_once __DIR__ ."/Cliente.php";
 //Variabili d'istanza Prodotto
-class Product
+class Product 
 {   
   
     public $name;
     public $price;
     public $description;
     public $imgUrl;
-    public $category;
+
+    use Cliente;
+
+    
 
     //Costruttore
 
-    public function __construct($name, $price, $description, $imgUrl, Category $category)
+    public function __construct($name, $price, $description, $imgUrl, Category $category, Cliente $registrato)
     {    
     
         $this->name = $name;
@@ -22,9 +25,13 @@ class Product
         $this->description = $description;
         $this->imgUrl = $imgUrl;
         $this ->category = $category;
+        $this ->cliente = $registrato;
+     
         
 
     }
+
+    
 
     //Metodi
 
@@ -42,11 +49,18 @@ class Product
 
     public function getPrice()
     {
-        return $this->price;
+
+        $prezzoScontato = $this->price;
+
+        if($this->registrato){
+            $prezzoScontato = $prezzoScontato - ($prezzoScontato * 0.20);
+
+        }
+        return $prezzoScontato;
     }
-    public function setPrice($nuovoPrice)
+    public function setPrice($price)
     { 
-         $this->price = $nuovoPrice;
+         $this->price = $price;
     }
 
     //GETTER AND SETTER DESCRIPTION

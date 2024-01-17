@@ -18,8 +18,11 @@ $productsForDogs = [
         "Ciotola in acciaio inossidabile resistente per cani di tutte le taglie.",
         "https://www.galleranistore.it/media/catalog/product/cache/1/image/600x/040ec09b1e35df139433887a97daa66f/c/i/ciotola_blu.jpg",
         $catgDogs,
+       "Plastica",
         "Plastica",
-        "Rosso"
+        
+      
+       
 
     ),
     new Giocho (

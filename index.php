@@ -105,6 +105,7 @@ require __DIR__ . "/data.php";
                                 <?= get_class($product) ?>/
                                 <?= $product->category->name ?>
                             </p>
+                            <p>
                             <a href="#" class="btn btn-primary">Compra</a>
                         </div>
                     </div>
